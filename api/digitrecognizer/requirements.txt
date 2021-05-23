@@ -1,0 +1,11 @@
+numpy
+pandas
+math 
+h5py
+matplotlib.pyplot
+scipy
+tensorflow
+os
+random
+cv2
+sklearn
