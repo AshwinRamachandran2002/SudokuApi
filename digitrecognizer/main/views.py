@@ -112,9 +112,12 @@ def predict(request):
 def index(request):
     digit=sudokumodify(request)
     return render(request, 'index.html', {'digit':digit})
+def fir(request):
+    return render(request,"index.html",{'digit':3})
 # urls.py
 from django.urls import path
 from .views import index
 urlpatterns = [
-    path('', index, name="index")
+    path('main', index, name="index"),
+    path('', fir, name="fir")
 ]
