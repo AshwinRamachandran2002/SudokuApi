@@ -1,4 +1,5 @@
 import numpy as np # linear algebra
+import cv2
 import tensorflow as tf
 from tensorflow.python.framework import ops
 from tensorflow.keras.models import Sequential
@@ -10,7 +11,7 @@ from tensorflow.keras.preprocessing import image
 def predict(request):
     model=tf.keras.models.load_model("./anoth_model11.h5")
     result=0
-    imgData = request.POST.get('img')
+    imgData = cv2.imread('./img.png')
     img = np.asarray(imgData)
     img=img.reshape(1,28,28,1)
     predictions = model.predict(img)
@@ -22,5 +23,3 @@ def predict(request):
     else:
         result=(0)
     return (result)
-
-    return result

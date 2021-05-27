@@ -1,2 +1,2 @@
 numpy
-tensorflow
+opencv-python-headless
