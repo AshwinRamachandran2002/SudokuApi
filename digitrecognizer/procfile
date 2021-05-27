@@ -1,1 +1,0 @@
-web: gunicorn digitrecognizer.wsgi --log-file -
