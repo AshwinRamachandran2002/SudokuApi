@@ -7,4 +7,4 @@ urlpatterns= [
     path('admin/', admin.site.urls),
     path('main/', include('main.views')),
     path('', RedirectView.as_view(url='main/')),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
