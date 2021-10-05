@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = ')rb*w+-98*)1%5g0t@qg^9lh(d^s=707!@4!(&s^*sb87hni9j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sudokuappapi.herokuapp.com']
+ALLOWED_HOSTS = ['sudokuappapi.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'digitrecognizer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR)+'/main/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,5 +118,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'main/static/'
+MEDIA_URL = 'main/pictures/'
+#STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'media')
