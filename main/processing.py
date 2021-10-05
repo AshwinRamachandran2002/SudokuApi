@@ -144,3 +144,7 @@ def retrain(image,target):
         Y_train.append(int(target))
     model.fit(X_train,Y_train,epochs=5)
     model.save("main/anoth_model11.h5")
+
+
+def solve(input):
+    
