@@ -147,4 +147,4 @@ def retrain(image,target):
 
 
 def solve(input):
-    
+    pass
