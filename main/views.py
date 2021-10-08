@@ -20,7 +20,7 @@ def solve(request):
         else:
             print(form.errors)
     else:
-        return 404,"not a post request"
+        return "not a post request"
     #return render(request,'solve.html',{'form':form})
 
 
@@ -34,6 +34,6 @@ def retrain(request):
         else:
             print(form.errors)
     else:
-        return 404,"not a post request"
+        return "not a post request"
     #return render(request,'solve.html',{'form':form})
 
